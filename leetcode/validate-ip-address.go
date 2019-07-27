@@ -24,12 +24,13 @@ func isValid4Item(segment string) (int, error) {
 }
 
 func isValid6Item(item string) (uint64, error) {
-	if len(item) > 4 || len(item) == 0 {
+	length := len(item)
+	if length > 4 || length == 0 {
 		return 0, errors.New("invalid length")
 	}
-	if item[0] == '0' && len(item) > 1 {
+	if item[0] == '0' && length != 4 && length > 1 {
 		if item[1] == '0' {
-			return 0, errors.New("invalid lead 0 ")
+			return 0, errors.New("invalid lead 0")
 		}
 	}
 
