@@ -51,8 +51,8 @@ func Test_merge_all(t *testing.T) {
 
 func Test_merge_inner(t *testing.T) {
 	data := [][]int{
-	    []int{1,4},
-	    []int{2,3},
+		[]int{1, 4},
+		[]int{2, 3},
 	}
 	result := merge(data)
 	actual := pairs_array(result)
