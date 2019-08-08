@@ -28,7 +28,7 @@ func Qsort(a []int, low, high int) {
 			break
 		}
 		a[i], a[j] = a[j], a[i]
-		j--
+		// j--
 	}
 	a[low], a[j] = a[j], a[low]
 	Qsort(a, low, j)
