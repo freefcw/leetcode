@@ -1,5 +1,6 @@
 package leetcode
 
+// Item contain value and count
 type Item struct {
 	val   int
 	count int

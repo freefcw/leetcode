@@ -1,5 +1,6 @@
 package leetcode
 
+// ListNode is basic List Node struct
 type ListNode struct {
 	Val  int
 	Next *ListNode

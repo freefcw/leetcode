@@ -25,7 +25,7 @@ func maxArea(height []int) int {
 	return maximum
 }
 
-func maxArea_force(height []int) int {
+func maxAreaForce(height []int) int {
 	maximum := 0
 	for i := 0; i < len(height)-1; i++ {
 		for j := i + 1; j < len(height); j++ {

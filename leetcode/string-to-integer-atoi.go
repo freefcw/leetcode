@@ -1,12 +1,5 @@
 package leetcode
 
-const (
-	MAX_INT   = 1<<31 - 1
-	MIN_INT   = -1 << 31
-	MAX_LIMIT = MAX_INT / 10
-	MIN_LIMIT = MIN_INT / 10
-)
-
 func stripLeadSpace(s string) int {
 	for i := 0; i < len(s); i++ {
 		if s[i] == ' ' {
@@ -37,17 +30,17 @@ func myAtoi(str string) int {
 	}
 	result := 0
 	for i := from; i < len(str); i++ {
-		limit := MAX_INT - result*10
+		limit := maxInt32 - result*10
 		if sign == -1 {
-			limit = -(result*10 + MIN_INT)
+			limit = -(result*10 + minInt32)
 		}
 		current := int(str[i] - '0')
 		if current >= 0 && current <= 9 {
 			if current > limit {
 				if sign == 1 {
-					return MAX_INT
+					return maxInt32
 				}
-				return MIN_INT
+				return minInt32
 			}
 			result = result*10 + current
 		} else {

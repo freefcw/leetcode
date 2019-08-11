@@ -10,7 +10,7 @@ func Test_merge_none(t *testing.T) {
 		[]int{15, 18},
 	}
 	result := merge(data)
-	actual := pairs_array(result)
+	actual := pairsArray(result)
 	expect := "[[1,2][3,6][8,10][15,18]]"
 
 	if actual != expect {
@@ -26,7 +26,7 @@ func Test_merge_front(t *testing.T) {
 		[]int{15, 18},
 	}
 	result := merge(data)
-	actual := pairs_array(result)
+	actual := pairsArray(result)
 	expect := "[[1,6][8,10][15,18]]"
 
 	if actual != expect {
@@ -41,7 +41,7 @@ func Test_merge_all(t *testing.T) {
 		[]int{5, 6},
 	}
 	result := merge(data)
-	actual := pairs_array(result)
+	actual := pairsArray(result)
 	expect := "[[1,6]]"
 
 	if actual != expect {
@@ -55,7 +55,7 @@ func Test_merge_inner(t *testing.T) {
 		[]int{2, 3},
 	}
 	result := merge(data)
-	actual := pairs_array(result)
+	actual := pairsArray(result)
 	expect := "[[1,4]]"
 
 	if actual != expect {
