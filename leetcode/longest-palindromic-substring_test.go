@@ -47,7 +47,7 @@ func TestLongestPalindrome(t *testing.T) {
 	}
 
 	for i, item := range tests {
-		actual := longestPalindrome2(item.input)
+		actual := longestPalindrome(item.input)
 		if actual != item.expect {
 			t.Fatalf("%d expect %s, actual %s", i, item.expect, actual)
 		}
