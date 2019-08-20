@@ -46,6 +46,9 @@ func bfs(beginWord, endWord string, pendingWords []string, level int) int {
 		if pendingWords[i] == endWord {
 			return level + 2
 		}
+	}
+
+	for i := 0; i < len(pendingWords); i++ {
 		llVisited[pendingWords[i]] = true
 		entries, ok := llWordRelation.GetRelate(pendingWords[i])
 		if !ok {
@@ -54,6 +57,9 @@ func bfs(beginWord, endWord string, pendingWords []string, level int) int {
 		for _, word := range entries {
 			if llVisited[word] {
 				continue
+			}
+			if word == endWord {
+				return level + 3
 			}
 			newPendingWords = append(newPendingWords, word)
 		}
