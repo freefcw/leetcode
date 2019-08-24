@@ -2,18 +2,6 @@ package leetcode
 
 import "testing"
 
-func isIntsEqual(a []int, b []int) bool {
-	if len(a) != len(b) {
-		return false
-	}
-	for i := 0; i < len(a); i++ {
-		if a[i] != b[i] {
-			return false
-		}
-	}
-	return true
-}
-
 func TestNextPermutation(t *testing.T) {
 	tests := []struct {
 		nums   []int
@@ -39,7 +27,7 @@ func TestNextPermutation(t *testing.T) {
 
 	for _, item := range tests {
 		nextPermutation(item.nums)
-		if !isIntsEqual(item.nums, item.expect) {
+		if !intsEqual(item.nums, item.expect) {
 			t.Fatalf("\nexpect %v, actual %v", item.expect, item.nums)
 		}
 	}
